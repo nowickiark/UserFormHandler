@@ -1,6 +1,7 @@
 package com.userForm.UserFormHandler.service;
 
 import com.userForm.UserFormHandler.data.UserDataSet;
+import com.userForm.UserFormHandler.model.Person;
 import com.userForm.UserFormHandler.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,4 +38,20 @@ public class UserServiceImpl implements UserService {
 
         return matchingUserModel;
     }
+
+
+    public void addUser(UserModel userModel){
+        userDataSet.addUser(userModel);
+    }
+
+    public boolean doesUserExist(String name){
+
+        boolean result;
+
+        if(getUserByName(name) == null) result = false;
+        else result = true;
+
+        return result;
+    }
+
 }
