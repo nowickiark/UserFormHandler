@@ -1,3 +1,5 @@
+
+
 const contactInputs = document.querySelectorAll('.contact-input'); //znajdujemy wszystkie lementy z klasy contact-input
 
 console.log('Dziala')
@@ -19,9 +21,4 @@ for(let i = 0; i < contactInputs.length; i++){
 
 }
 
-function submit_byName(){
 
-var forms = document.getElementsByName('contactForm');
-forms[0].submit();
-
-}

@@ -6,6 +6,7 @@
         <link href="https://fonts.googleapis.com/css?family=DM+Serif+Text&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="../static/style.css" th:href="@{/style.css}"/>
         <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
 
@@ -15,7 +16,7 @@
 
 
 
-                    <form action="http://localhost:8080/userForm" method="POST" name="contactForm" class="contact-form">
+                    <form name="contactForm" class="contact-form">
                         
                         <div class="form-group">
                             <label for="name">Type your name</label>
@@ -36,18 +37,27 @@
                             <p th:text="${name}"> asd</p>
                         </div>
 
-                        <input type="submit" class="contact-submit-button" value="submit" onclick="submit_byName()">
-                        <!--<input type="button" class="contact-submit-button" value="Submit by name" onclick="submit_byName()">-->
+                        <div id="return_data">
 
+                        </div>
 
+                        <div id="user-info">
 
+                        </div>
 
                         <div class="contact-status">
-                            All filds are required!
+                                All filds are required!
                         </div>
+
                         
 
                     </form>
+
+                    <button id="add_form" class="contact-submit-button">Submit</button>
+
+                    
+
+
 
                     
 
@@ -57,8 +67,8 @@
         
         <!-- Załadowanie pliku ze skryptami w tym miejscu tak zeby mieć dostęp do wszytskich elementów znajdujących się w bodyu-->
         <script src="/static/main.js" th:src="@{/main.js}"></script>
-       <!-- <link rel="stylesheet" type="text/css" href="../static/style.css" th:href="@{/style.css}"/>
-      -->
+        <script src="/static/dataReciver.js" th:src="@{/dataReciver.js}"></script>
+                    
 
     </body>
 </html>

@@ -12,8 +12,6 @@ public class UserDataManual implements UserDataSet {
 
     public UserDataManual(){
         this.userList = new ArrayList<>();
-        userList.add(new UserModel("Mrek","Kowalski"));
-        userList.add(new UserModel("Jan", "Nowak"));
     }
 
     @Override
